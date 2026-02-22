@@ -2,7 +2,7 @@
 
 ![Version](https://img.shields.io/badge/version-0.1-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
-
+**IMPORTANT** THIS IS ONLY A SOLO PROJECT PLEASE CREATE AN ISSUE IF YOU WISH YOU TO JOIN THIS PROJECT AND THERE MIGHT BE ALOT OF BUGS WE WOULD LOVE IT OF YOU REPORT THEM TO US THANKS FOR YOUR SUPPORT
 **PiMine** is a lightweight CLI tool that gets a fully working Minecraft Java Edition server running on your Raspberry Pi (3, 4, or 5) — or any Linux machine — in minutes.
 
 Skip the usual pain: no manual Java setup, no downloading jars yourself, no editing EULA files by hand. Just run the binary, answer a couple of quick questions, and your server is live for you and your friends.
