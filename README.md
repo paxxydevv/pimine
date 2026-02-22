@@ -22,18 +22,19 @@ The binaries are already in the repo root: `mypiserver-arm` and `mypiserverx86-6
 0.1: Clone the repo:
    git clone https://github.com/rasberrypimine/pimine.git
    cd pimine
-   
-0.2: Launch it!
+0.2: Make it executable:
+    chmod +x mypiserver-arm
+    chmod +x mypiserverx86-64
+0.3: Launch it!
    ./mypiserver-arm             # on Raspberry Pi 3/4/5
    ./mypiserverx86-64           # on desktop/server Linux (x86-64)
    
-0.3: Customize it!
-    There isnt real easy way to customize it yet with precompiled binaries but it will be added in newer versions we are planning on adding it on 0.2!
-    If you want to customize it (ram, server version, and even more features) you must build it from the source and its pretty easy follow 1.3
+0.4: Customize it!
+    Precompiled binaries doesnt support easier customizations yet. Please follow 1.1 for manual customizations.
     
 ### Building from Source (If You Want to Customize)
 1.1: Warning:
-    It is reccomended you use the precompiled binaries they were been tested.
+    It is recommended you use the precompiled binaries as they have been tested.
     To compile on x86-64 and use them on arm devices you must use a cross compiler or directly compile in your arm device.
     
 1.2: Clone the repo:
@@ -42,11 +43,11 @@ The binaries are already in the repo root: `mypiserver-arm` and `mypiserverx86-6
    
 1.3: Customize it!
     To make ram customizations check src/run.cpp
-    To make server customizations add your own server link in helpers/installer.sh (some servers might require diffrent JVK versions)
-    Dont touch the header(.h) files unless you add or remove a cpp file.
+    To make server customizations add your own server link in helpers/installer.sh (some servers might require different JDK versions)
+    Don't touch the header(.h) files unless you add or remove a cpp file.
     
 1.4: Compiling!
-    Complining is pretty easy on rasberry pi and your linux device.
+    Compiling is pretty easy on raspberry pi and your linux device.
     Run sudo apt install build-essential (Debian based distro rasberry pi os, ubuntu etc.)
     Run sudo pacman -S gcc (Arch based distros)
     Run sudo dnf install gcc-c++ (Fedora)
@@ -56,19 +57,19 @@ The binaries are already in the repo root: `mypiserver-arm` and `mypiserverx86-6
     ./(your compiled binary name)
     
 1.6: Thats it!
-    If you have had any issues compiling please make an issue and compling process can change later on the newer versions please check this part evertime a new version releases!
+    If you have had any issues compiling please make an issue and compling process can change later on the newer versions please check this part every time a new version releases!
     
 ### Whats next?
 2.1: Due to lack of people in this project updates might take a while.
 2.2: Check 3.1 for our goals.
 
 ### Version 0.2 goals!
-3.1: We are planing a new version picker (version -- 1.21)
+3.1: We are planning a new version picker (version -- 1.21)
 
 3.2: Support for Paper/Purpur/Spigot
 
-3.3: More easy way to customize your pimine
+3.3: More easier way to customize your pimine
 
 3.4: And our own discord server!
 
-3.5: A website that will run on port 2500 on your devices ip that will make controlling your minecraft server very easy (We are working on this very heavyily.)
+3.5: A website that will run on port 2500 on your device’s IP that will make controlling your minecraft server very easy (We are working on this very heavily.)
