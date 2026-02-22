@@ -17,7 +17,7 @@ Skip the usual pain: no manual Java setup, no downloading jars yourself, no edit
 
 ### Quick Start (Using Precompiled Binaries — Easiest Way)
 
-The binaries are already in the repo root: `mypiserver-arm` and `mypiserverx86-64`.
+The binaries are already in the repo releases: `mypiserver-arm` and `mypiserverx86-64`.
 
 0.1: Clone the repo:
    git clone https://github.com/rasberrypimine/pimine.git
