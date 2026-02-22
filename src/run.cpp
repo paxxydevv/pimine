@@ -1,33 +1,95 @@
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <fstream>
+
+std::string minram = "1G";   // defaults
+std::string maxram = "2G";
+std::string port = "25565";
+bool createsite = false;
+
+void readConfig() {
+    std::ifstream file("pimine.conf");
+
+    if (!file.is_open()) {
+        std::cout << "No config found. Using defaults.\n";
+        return;
+    }
+
+    std::string line;
+
+    while (std::getline(file, line)) {
+        if (line.empty()) continue;
+
+        size_t pos = line.find('=');
+        if (pos == std::string::npos) continue;
+
+        std::string key = line.substr(0, pos);
+        std::string value = line.substr(pos + 1);
+
+        // trim spaces
+        key.erase(0, key.find_first_not_of(" "));
+        key.erase(key.find_last_not_of(" ") + 1);
+        value.erase(0, value.find_first_not_of(" "));
+        value.erase(value.find_last_not_of(" ") + 1);
+
+        if (key == "minram") minram = value;
+        else if (key == "maxram") maxram = value;
+        else if (key == "port") port = value;
+        else if (key == "createsite") createsite = (value == "true");
+    }
+}
 
 void run() {
-    std::cout << "Starting Minecraft server..." << std::endl;
+    std::cout << "Starting Minecraft server...\n";
+    readConfig();
 
-    // Determine the correct home directory (even if running with sudo)
-    const char* sudo_user = getenv("SUDO_USER");  // non-root user if sudo is used
+    const char* sudo_user = getenv("SUDO_USER");
     std::string home_dir;
 
-    if (sudo_user) {
+    if (sudo_user)
         home_dir = std::string("/home/") + sudo_user;
-    } else {
+    else
         home_dir = getenv("HOME");
-    }
 
     std::string folder = home_dir + "/minecraft-server";
 
-    std::string cmd_first_run = "echo 'Current folder:' && cd " + folder +
-                                " && pwd && java -Xms512M -Xmx2G -jar server.jar nogui || true";
-    system(cmd_first_run.c_str());
-
-    // Ensure EULA is accepted
+    // ✅ STEP 1 — Accept EULA FIRST
     std::string eula_cmd = "echo 'eula=true' > " + folder + "/eula.txt";
     system(eula_cmd.c_str());
 
-    std::cout << "EULA accepted. Running server properly now..." << std::endl;
+    // ✅ STEP 2 — First run ONLY if properties don't exist
+    std::string check_props = folder + "/server.properties";
+    std::ifstream props(check_props);
 
-    // Run server properly
-    std::string cmd_run = "cd " + folder + " && java -Xms512M -Xmx2G -jar server.jar nogui";
-    system(cmd_run.c_str());
+    if (!props.good()) {
+        std::cout << "First launch: generating server files...\n";
+
+        std::string first_run =
+            "cd " + folder +
+            " && java -Xms" + minram +
+            " -Xmx" + maxram +
+            " -jar server.jar nogui & "
+            "sleep 10 && pkill -f server.jar";
+
+        system(first_run.c_str());
+    }
+
+    // ✅ STEP 3 — Set port safely
+    std::string port_cmd =
+        "cd " + folder +
+        " && sed -i 's/^server-port=.*/server-port=" + port + "/' server.properties";
+
+    system(port_cmd.c_str());
+
+    // ✅ STEP 4 — Run server normally
+    std::cout << "Running Minecraft server on port " << port << "...\n";
+
+    std::string run_cmd =
+        "cd " + folder +
+        " && java -Xms" + minram +
+        " -Xmx" + maxram +
+        " -jar server.jar nogui";
+
+    system(run_cmd.c_str());
 }
