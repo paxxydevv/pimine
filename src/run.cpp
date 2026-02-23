@@ -2,9 +2,12 @@
 #include <cstdlib>
 #include <string>
 #include <fstream>
+#include <filesystem>
+#include <thread>
+#include <chrono>
 
-std::string minram = "1G";   // defaults
-std::string maxram = "2G";
+std::string minram = "2G";   // defaults
+std::string maxram = "3G";
 std::string port = "25565";
 bool createsite = false;
 
@@ -60,19 +63,42 @@ void run() {
 
     std::string check_props = folder + "/server.properties";
     std::ifstream props(check_props);
-
     if (!props.good()) {
-        std::cout << "First launch: generating server files...\n";
+    std::cout << "First launch: generating server files...\n";
 
-        std::string first_run =
-            "cd " + folder +
-            " && java -Xms" + minram +
-            " -Xmx" + maxram +
-            " -jar server.jar nogui & "
-            "sleep 10 && pkill -f server.jar";
+    std::string start_cmd =
+        "cd " + folder +
+        " && java -Xms" + minram +
+        " -Xmx" + maxram +
+        " -jar server.jar nogui &";
 
-        system(first_run.c_str());
+    system(start_cmd.c_str());
+
+    std::string props_path = folder + "/server.properties";
+
+    std::cout << "Waiting for server files to generate...\n";
+
+    int timeout = 120; // seconds
+
+    while (!std::filesystem::exists(props_path) && timeout > 0) {
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+        timeout--;
     }
+
+    if (timeout == 0) {
+        std::cout << "Error: Server files were not generated in time.\n";
+        return;
+    }
+
+    system("pkill -f server.jar");
+    std::this_thread::sleep_for(std::chrono::seconds(3));
+}
+
+    // Kill server after generation
+    system("pkill -f server.jar");
+
+    std::this_thread::sleep_for(std::chrono::seconds(3));
+}
 
     std::string port_cmd =
         "cd " + folder +
