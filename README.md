@@ -108,11 +108,13 @@ If you have any issues compiling, please create an issue. The compilation proces
 
 - **Version 0.2 goals:**
   - New version picker (support for Minecraft 1.21+) !released!
-  - Support for Paper/Purpur/Spigot servers
+  - Support for Paper/Purpur/Spigot servers !cancaled next in 0.2!
   - Easier customization interface !released!
+  - Web dashboard (port 2500) for easy server management !cancaled next in 0.2!
+- **Version 0.3 goals:**
   - Discord server
-  - Web dashboard (port 2500) for easy server management
-
+  - Web dashboard
+  - Support for paper and spigot servers.
 - **Note:** Due to limited contributors, updates may take time. Want to help? Create an issue to join the project!
 
 ### License
