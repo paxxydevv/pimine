@@ -7,10 +7,10 @@
 
 **PiMine** is a lightweight CLI tool that gets a fully working Minecraft Java Edition server running on your Raspberry Pi (3, 4, or 5) — or any Linux machine — in minutes.
 
-Skip the usual pain: no manual Java setup, no downloading jars yourself, no editing EULA files by hand. Just run the binary, answer a couple of quick questions, and your server is live for you and your friends.
+Skip the usual pain: no manual Java setup, no downloading jars yourself, no editing EULA files by hand. Just run the binary, answer a couple of quick questions, and your server is live for you and you[...] 
 
 ### Key Features
-- **Precompiled binaries included** right in the our latest releases!!! — one for ARM (Raspberry Pi) and one for x86-64 Linux — run them directly, no build step required in most cases  
+- **Precompiled binaries included** right in our latest releases!!! — one for ARM (Raspberry Pi) and one for x86-64 Linux — run them directly, no build step required in most cases  
 - Automatically installs missing dependencies (Java, curl, git, etc.)  
 - Downloads the latest stable Minecraft server jar  
 - Accepts the EULA for you    
@@ -40,7 +40,7 @@ chmod +x mypiserverx86-64
 ```
 
 **0.4:** Customize it!
-Precompiled binaries doesn't support easier customizations, You have to build from the source follow 1.1.
+Precompiled binaries don't support easier customizations. You have to build from the source. Follow 1.1.
 
 ### Building from Source (If You Want to Customize or any other reason at all!)
 
@@ -55,7 +55,7 @@ cd pimine
 
 **1.3:** Customize it!
 - To make RAM customizations, check `src/run.cpp`
-- To make server customizations, add your own server link in `helpers/installer.sh` (some servers might require different java versions)
+- To make server customizations, add your own server link in `helpers/installer.sh` (some servers might require different Java versions)
 - Don't touch the header (`.h`) files unless you add or remove a `.cpp` file
 
 **1.4:** Install build tools:
@@ -69,7 +69,7 @@ sudo pacman -S gcc
 # Fedora-based distros
 sudo dnf install gcc-c++
 
-#if your distro isnt here its mostly
+# If your distro isn't here, it's mostly:
 sudo (package manager) install gcc
 ```
 
@@ -98,16 +98,18 @@ If you have any issues compiling, please create an issue. The compilation proces
 **Issue: Server crashes on startup**
 - Check that you have enough RAM available (minimum 512MB recommended for Pi)
 - Review the server logs for specific error messages
-**Issue: Script says there is missing dependencies**
-- That almost means you are not using a debian based distro we hardcoded installation of required dependencies.
-- Please manually install them you will need curl git python3(not required reccomended) openjdk-25-jre-headless jq
-- Or check you internet connection!
+
+**Issue: Script says there are missing dependencies**
+- That almost always means you are not using a Debian-based distro. We hardcoded installation of required dependencies.
+- Please manually install them. You will need: curl, git, python3 (not required, recommended), openjdk-25-jre-headless, jq
+- Or check your internet connection!
+
 ### What's Next?
 
 - **Version 0.2 goals:**
   - New version picker (support for Minecraft 1.21+) !releasing today!
   - Support for Paper/Purpur/Spigot servers
-  !- Easier customization interface -!
+  - Easier customization interface
   - Discord server
   - Web dashboard (port 2500) for easy server management
 
