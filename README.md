@@ -26,9 +26,10 @@ The binaries are already in the repo releases: `mypiserver-arm` and `mypiserverx
 ```bash
 wget https://github.com/paxxydevv/pimine/releases/download/v0.2_base/pimine-arm # Arm raspberry pi sbms etc.
 ```
+```bash
 **x86-64**
 wget https://github.com/paxxydevv/pimine/releases/download/v0.2_base/pimine-x86-64 # Lunix machines.
-
+```
 **0.2:** Make it executable:
 **ARM**
 ```bash
