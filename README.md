@@ -40,9 +40,9 @@ chmod +x mypiserverx86-64
 ```
 
 **0.4:** Customize it!
-Precompiled binaries don't support easier customizations yet. Please follow section 1 for manual customizations.
+Precompiled binaries doesn't support easier customizations, You have to build from the source follow 1.1.
 
-### Building from Source (If You Want to Customize)
+### Building from Source (If You Want to Customize or any other reason at all!)
 
 **1.1:** Warning:
 It is recommended you use the precompiled binaries as they have been tested. To compile on x86-64 and use them on ARM devices, you must use a cross compiler or directly compile on your ARM device.
@@ -68,7 +68,11 @@ sudo pacman -S gcc
 
 # Fedora-based distros
 sudo dnf install gcc-c++
+
+#if your distro isnt here its mostly
+sudo (package manager) install gcc
 ```
+
 
 **1.5:** Compile and run:
 ```bash
@@ -94,13 +98,16 @@ If you have any issues compiling, please create an issue. The compilation proces
 **Issue: Server crashes on startup**
 - Check that you have enough RAM available (minimum 512MB recommended for Pi)
 - Review the server logs for specific error messages
-
+**Issue: Script says there is missing dependencies**
+- That almost means you are not using a debian based distro we hardcoded installation of required dependencies.
+- Please manually install them you will need curl git python3(not required reccomended) openjdk-25-jre-headless jq
+- Or check you internet connection!
 ### What's Next?
 
 - **Version 0.2 goals:**
-  - New version picker (support for Minecraft 1.21+)
+  - New version picker (support for Minecraft 1.21+) !releasing today!
   - Support for Paper/Purpur/Spigot servers
-  !- Easier customization interface -!already finished in v0.1 patches
+  !- Easier customization interface -!
   - Discord server
   - Web dashboard (port 2500) for easy server management
 
