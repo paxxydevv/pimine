@@ -27,7 +27,7 @@ void readConfig() {
         std::string key = line.substr(0, pos);
         std::string value = line.substr(pos + 1);
 
-        // trim spaces
+        
         key.erase(0, key.find_first_not_of(" "));
         key.erase(key.find_last_not_of(" ") + 1);
         value.erase(0, value.find_first_not_of(" "));
@@ -54,11 +54,10 @@ void run() {
 
     std::string folder = home_dir + "/minecraft-server";
 
-    // ✅ STEP 1 — Accept EULA FIRST
+    
     std::string eula_cmd = "echo 'eula=true' > " + folder + "/eula.txt";
     system(eula_cmd.c_str());
 
-    // ✅ STEP 2 — First run ONLY if properties don't exist
     std::string check_props = folder + "/server.properties";
     std::ifstream props(check_props);
 
@@ -75,14 +74,12 @@ void run() {
         system(first_run.c_str());
     }
 
-    // ✅ STEP 3 — Set port safely
     std::string port_cmd =
         "cd " + folder +
         " && sed -i 's/^server-port=.*/server-port=" + port + "/' server.properties";
 
     system(port_cmd.c_str());
 
-    // ✅ STEP 4 — Run server normally
     std::cout << "Running Minecraft server on port " << port << "...\n";
 
     std::string run_cmd =
