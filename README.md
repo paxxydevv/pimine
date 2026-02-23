@@ -10,7 +10,7 @@
 Skip the usual pain: no manual Java setup, no downloading jars yourself, no editing EULA files by hand. Just run the binary, answer a couple of quick questions, and your server is live for you and your friends.
 
 ### Key Features
-- **Precompiled binaries included** right in the repo — one for ARM (Raspberry Pi) and one for x86-64 Linux — run them directly, no build step required in most cases  
+- **Precompiled binaries included** right in the our latest releases!!! — one for ARM (Raspberry Pi) and one for x86-64 Linux — run them directly, no build step required in most cases  
 - Automatically installs missing dependencies (Java, curl, git, etc.)  
 - Downloads the latest stable Minecraft server jar  
 - Accepts the EULA for you    
@@ -55,7 +55,7 @@ cd pimine
 
 **1.3:** Customize it!
 - To make RAM customizations, check `src/run.cpp`
-- To make server customizations, add your own server link in `helpers/installer.sh` (some servers might require different JDK versions)
+- To make server customizations, add your own server link in `helpers/installer.sh` (some servers might require different java versions)
 - Don't touch the header (`.h`) files unless you add or remove a `.cpp` file
 
 **1.4:** Install build tools:
@@ -100,7 +100,7 @@ If you have any issues compiling, please create an issue. The compilation proces
 - **Version 0.2 goals:**
   - New version picker (support for Minecraft 1.21+)
   - Support for Paper/Purpur/Spigot servers
-  - Easier customization interface
+  !- Easier customization interface -!already finished in v0.1 patches
   - Discord server
   - Web dashboard (port 2500) for easy server management
 
