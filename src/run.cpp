@@ -92,7 +92,6 @@ void run() {
 
     system("pkill -f server.jar");
     std::this_thread::sleep_for(std::chrono::seconds(3));
-}
 
     // Kill server after generation
     system("pkill -f server.jar");

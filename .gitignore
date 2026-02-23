@@ -1,5 +1,7 @@
 mypiserver-arm
 mypiserverx86-64
+release-arm
+release-x86-64
 *.o
 *.a
 *.so
