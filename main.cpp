@@ -5,8 +5,8 @@
 int main() {
 	std::string choice;
 	std::cout << "Welcome to pimine!" << std::endl;
-	std::cout << "Build date 0.1" << std::endl;
-	std::cout << "Do you wish to install the latest minecraft server now? (Y, n): ";
+	std::cout << "Build date 0.2 - Bug patches" << std::endl;
+	std::cout << "Do you wish to install the minecraft server now? (Y, n): ";
 	std::cin >> choice;
 	if (choice == "" or choice == "Y" or choice == "Yes" or choice == "yes" or choice == "y") {
 		install();
