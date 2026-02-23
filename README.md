@@ -22,16 +22,20 @@ Skip the usual pain: no manual Java setup, no downloading jars yourself, no edit
 The binaries are already in the repo releases: `mypiserver-arm` and `mypiserverx86-64`.
 
 **0.1:** Install the precompiled binaries:
+**ARM**
 ```bash
 wget https://github.com/paxxydevv/pimine/releases/download/v0.2_base/pimine-arm # Arm raspberry pi sbms etc.
-wget https://github.com/paxxydevv/pimine/releases/download/v0.2_base/pimine-x86-64 # Lunix machines.
 ```
+**x86-64**
+wget https://github.com/paxxydevv/pimine/releases/download/v0.2_base/pimine-x86-64 # Lunix machines.
 
 **0.2:** Make it executable:
+**ARM**
 ```bash
 chmod +x mypiserver-arm
-chmod +x mypiserverx86-64
 ```
+**x-86-64**
+chmod +x mypiserverx86-64
 
 **0.3:** Launch it!
 ```bash
