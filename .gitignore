@@ -1,0 +1,10 @@
+mypiserver-arm
+mypiserverx86-64
+*.o
+*.a
+*.so
+.vscode/
+.idea/
+*.swp
+*.swo
+
