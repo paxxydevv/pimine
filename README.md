@@ -107,9 +107,9 @@ If you have any issues compiling, please create an issue. The compilation proces
 ### What's Next?
 
 - **Version 0.2 goals:**
-  - New version picker (support for Minecraft 1.21+) !releasing today!
+  - New version picker (support for Minecraft 1.21+) !released!
   - Support for Paper/Purpur/Spigot servers
-  - Easier customization interface
+  - Easier customization interface !released!
   - Discord server
   - Web dashboard (port 2500) for easy server management
 
