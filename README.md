@@ -24,24 +24,33 @@ The binaries are already in the repo releases: `mypiserver-arm` and `mypiserverx
 **0.1:** Install the precompiled binaries:
 **ARM**
 ```bash
-wget https://github.com/paxxydevv/pimine/releases/download/v0.2_base/pimine-arm # Arm raspberry pi sbms etc.
+wget https://github.com/paxxydevv/pimine/releases/download/v0.2_patches/pimine-arm.tar.gz # Arm raspberry pi sbms etc.
+```
+**x86-64**
+```bash
+wget https://github.com/paxxydevv/pimine/releases/download/v0.2_patches/pimine-x86-64.tar.gz # Lunix machines.
+```
+--0.2:** Unzip it!
+```bash
+tar -xzf pimine-arm.tar.gz # arm
+```
+```bash
+tar -xzf pimine-x86-64.tar.gz # x86-64
+```
+
+**0.3:** Make it executable:
+**ARM**
+```bash
+chmod +x pimine-arm
 ```
 ```bash
 **x86-64**
-wget https://github.com/paxxydevv/pimine/releases/download/v0.2_base/pimine-x86-64 # Lunix machines.
+chmod +x pimine86-64
 ```
-**0.2:** Make it executable:
-**ARM**
+**0.4:** Launch it!
 ```bash
-chmod +x mypiserver-arm
-```
-**x-86-64**
-chmod +x mypiserverx86-64
-
-**0.3:** Launch it!
-```bash
-./mypiserver-arm             # on Raspberry Pi 3/4/5
-./mypiserverx86-64           # on desktop/server Linux (x86-64)
+./pimine-arm             # on Raspberry Pi 3/4/5
+./pimine-x86-64           # on desktop/server Linux (x86-64)
 ```
 
 **0.4:** Customize it!
