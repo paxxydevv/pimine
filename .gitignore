@@ -2,6 +2,8 @@ mypiserver-arm
 mypiserverx86-64
 release-arm
 release-x86-64
+pimine-arm
+pimine-x86-64
 *.o
 *.a
 *.so

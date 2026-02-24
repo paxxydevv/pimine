@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export TERM=xterm
 VERSION="$1"
 if [ -z "$VERSION" ]; then
   VERSION="1.21.11"  # fallback to latest
