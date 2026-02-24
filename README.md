@@ -90,7 +90,11 @@ sudo dnf install gcc-c++
 # If your distro isn't here, it's mostly:
 sudo (package manager) install gcc
 ```
-
+**1.4 INFO**:
+We have a built in tool in helpers/easycompiler.sh
+```bash
+./helpers/easycompiler.sh
+```
 
 **1.5:** Compile and run:
 ```bash
