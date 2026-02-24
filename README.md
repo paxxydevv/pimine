@@ -3,10 +3,6 @@
 ![Version](https://img.shields.io/badge/version-0.2-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-**IMPORTANT** This is a solo project. Please create an issue if you wish to join this project. There might be a lot of bugs — we'd love it if you reported them to us. Thanks for your support!
-**How can you help me?** 
-- If this helped you, please consider starring the repo!
-- Found a bug? Open an issue — I respond quickly!
 
 **PiMine** is a lightweight CLI tool that gets a fully working Minecraft Java Edition server running on your Raspberry Pi (3, 4, or 5) — or any Linux machine — in minutes.
 
@@ -140,8 +136,11 @@ If you have any issues compiling, please create an issue. The compilation proces
 - **Note:** Due to limited contributors, updates may take time. Want to help? Create an issue to join the project!
 
 ### License
-
 This project is licensed under the MIT License — see the LICENSE file for details.
-
 ### Extra support:
 Tiktok: paxx.cracks.the.h
+### Extra Note
+**IMPORTANT** This is a solo project. Please create an issue if you wish to join this project. There might be a lot of bugs — we'd love it if you reported them to us. Thanks for your support!
+**How can you help me?** 
+- If this helped you, please consider starring the repo!
+- Found a bug? Open an issue — I respond quickly!
