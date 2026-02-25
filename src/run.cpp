@@ -78,7 +78,7 @@ void run() {
 
     std::cout << "Waiting for server files to generate...\n";
 
-    int timeout = 120; // seconds
+    int timeout = 180; // seconds
 
     while (!std::filesystem::exists(props_path) && timeout > 0) {
         std::this_thread::sleep_for(std::chrono::seconds(1));

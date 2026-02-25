@@ -50,7 +50,7 @@ void install() {
     }
     std::cout << "Installing dependencies now..." << std::endl;
     // Install dependencies (sudo required) becuase minecraft need some dependencies to run and function!
-    system("sudo apt update && sudo apt install -y curl git python3 openjdk-25-jre-headless jq");
+    system("sudo apt install -y curl git python3 openjdk-25-jre-headless jq");
     system("clear");
     std::string selected_version = versions[choice-1];
     std::cout << "Installing "+selected_version+"_Minecraft server now..." << std::endl;
@@ -65,7 +65,7 @@ void install() {
     if (option == "y" || option == "Y") {
         run();
     } else {
-        std::cout << "Thank you for using pimine:<3" << std::endl;
+        std::cout << "Thank you for using pimine <3" << std::endl;
         exit(0);
     }
 }
