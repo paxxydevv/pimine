@@ -11,4 +11,6 @@ pimine-x86-64
 .idea/
 *.swp
 *.swo
-
+CMakeLists.txt
+*Arch-base
+*.py
