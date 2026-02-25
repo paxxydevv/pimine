@@ -23,11 +23,11 @@ The binaries are already in the repo releases: `mypiserver-arm` and `mypiserverx
 **0.1:** Install the precompiled binaries:
 **ARM**
 ```bash
-wget https://github.com/paxxydevv/pimine/releases/download/v0.2_patches/pimine-arm.tar.gz # Arm raspberry pi sbms etc.
+wget https://github.com/paxxydevv/pimine/releases/download/Base_release_0.3/pimine-arm.tar.gz # Arm raspberry pi sbms etc.
 ```
 **x86-64**
 ```bash
-wget https://github.com/paxxydevv/pimine/releases/download/v0.2_patches/pimine-x86-64.tar.gz # Lunix machines.
+wget https://github.com/paxxydevv/pimine/releases/download/Base_release_0.3/pimine-x86-64.tar.gz # Lunix machines.
 ```
 
 **0.2:** Unzip it!
@@ -47,7 +47,7 @@ chmod +x pimine-arm
 ```
 **x86-64**
 ```bash
-chmod +x pimine86-64
+chmod +x pimine-x86-64
 ```
 
 **0.4:** Launch it!
@@ -59,6 +59,14 @@ chmod +x pimine86-64
 **0.5:** Customize it!
 Precompiled binaries now support easier customisation.
 You can easily change max ram, port, host website (wip) etc.
+You can do it so by changing pimine.conf
+
+**0.6:** Startup arguments:
+In the 0.3 update we release startup arguments you can use them by:
+- "--run" This argument will try to launch the server in the normal install dir.
+- "--clean" This argument will try to clear all of the pimines file if you ever wanted to delete.
+- "--version" This argument will show the pimine version.
+Please let us know if you would like anohter startup argument.
 
 ### Building from Source (If You Want to Customize or any other reason at all!)
 
@@ -127,10 +135,8 @@ If you have any issues compiling, please create an issue. The compilation proces
 - Or check your internet connection!
 
 ### What's Next?
-- **Version 0.3 goals:**
-  - Discord server
-  - Web dashboard
-  - Support for paper and spigot servers.
+- **Version 0.4 goals:**
+  - Web dashboard.
 - **Note:** Due to limited contributors, updates may take time. Want to help? Create an issue and pr to join the project!
 
 ### License
