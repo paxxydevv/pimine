@@ -14,3 +14,4 @@ pimine-x86-64
 CMakeLists.txt
 *Arch-base
 *.py
+compilepackage.sh
