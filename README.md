@@ -127,17 +127,11 @@ If you have any issues compiling, please create an issue. The compilation proces
 - Or check your internet connection!
 
 ### What's Next?
-
-- **Version 0.2 goals:**
-  - New version picker (support for Minecraft 1.21+) !released!
-  - Support for Paper/Purpur/Spigot servers !cancaled next in 0.2!
-  - Easier customization interface !released!
-  - Web dashboard (port 2500) for easy server management !cancaled next in 0.2!
 - **Version 0.3 goals:**
   - Discord server
   - Web dashboard
   - Support for paper and spigot servers.
-- **Note:** Due to limited contributors, updates may take time. Want to help? Create an issue to join the project!
+- **Note:** Due to limited contributors, updates may take time. Want to help? Create an issue and pr to join the project!
 
 ### License
 This project is licensed under the MIT License — see the LICENSE file for details.
