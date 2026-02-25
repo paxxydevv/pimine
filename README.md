@@ -119,7 +119,7 @@ If you have any issues compiling, please create an issue. The compilation proces
 
 **Issue: "Command not found" when running the binary**
 - Make sure you ran `chmod +x` on the binary first
-- Verify you're in the correct directory: `ls -la | grep mypiserver`
+- Verify you're in the correct directory: `ls -la | grep pimine(arm or x86-64)`
 
 **Issue: Java not found**
 - The binary should auto-install Java, but if it fails, try manually installing: `sudo apt install default-jre` (Debian) or equivalent for your distro
@@ -147,6 +147,7 @@ This project is licensed under the MIT License — see the LICENSE file for deta
 Tiktok: paxx.cracks.the.h
 ### Extra Note
 **IMPORTANT** This is a solo project. Please create an issue if you wish to join this project. There might be a lot of bugs — we'd love it if you reported them to us. Thanks for your support!
+**IMPORTANT** We are possibly thinking to remove x86-64 due to lack of support we are having right now.
 **How can you help me?** 
 - If this helped you, please consider starring the repo!
 - Found a bug? Open an issue — I respond quickly!
