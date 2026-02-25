@@ -1,6 +1,6 @@
 # PiMine
 
-![Version](https://img.shields.io/badge/version-0.2-blue)
+![Version](https://img.shields.io/badge/version-0.3-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 
@@ -14,7 +14,9 @@ Skip the usual pain: no manual Java setup, no downloading jars yourself, no edit
 - Downloads the latest stable Minecraft server jar  
 - Accepts the EULA for you    
 - Starts the server right away  
-- Low overhead — performs well on Pi 4/5 with reasonable player counts  
+- Low overhead — performs well on Pi 4/5 with reasonable player counts
+- Very maintaned repo.
+- Fast support times.
 
 ### Quick Start (Using Precompiled Binaries — Easiest Way)
 
