@@ -20,7 +20,7 @@ Skip the usual pain: no manual Java setup, no downloading jars yourself, no edit
 
 ### Quick Start (Using Precompiled Binaries — Easiest Way)
 
-The binaries are already in the repo releases: `mypiserver-arm` and `mypiserverx86-64`.
+The binaries are already in the repo releases: `pimine-arm` and `pimine-x86-64`.
 
 **0.1:** Install the precompiled binaries:
 **ARM**
@@ -29,7 +29,7 @@ wget https://github.com/paxxydevv/pimine/releases/download/Base_release_0.3/pimi
 ```
 **x86-64**
 ```bash
-wget https://github.com/paxxydevv/pimine/releases/download/Base_release_0.3/pimine-x86-64.tar.gz # Lunix machines.
+wget https://github.com/paxxydevv/pimine/releases/download/Base_release_0.3/pimine-x86-64.tar.gz # Lunix desktop machines.
 ```
 
 **0.2:** Unzip it!
@@ -64,7 +64,7 @@ You can easily change max ram, port, host website (wip) etc.
 You can do it so by changing pimine.conf
 
 **0.6:** Startup arguments:
-In the 0.3 update we release startup arguments you can use them by:
+In the 0.3 update we released startup arguments you can use them by:
 - "--run" This argument will try to launch the server in the normal install dir.
 - "--clean" This argument will try to clear all of the pimines file if you ever wanted to delete.
 - "--version" This argument will show the pimine version.
@@ -82,7 +82,7 @@ cd pimine
 ```
 
 **1.3:** Customize it!
-- To make RAM customizations, check `src/run.cpp`
+- To make RAM customizations, check `pimine.conf`
 - To make server customizations, add your own server link in `helpers/installer.sh` (some servers might require different Java versions)
 - Don't touch the header (`.h`) files unless you add or remove a `.cpp` file
 
@@ -111,8 +111,14 @@ We have a built in tool in helpers/easycompiler.sh
 chmod +x (your compiled binary name)
 ./(your compiled binary name)
 ```
+**1.6:** Startup arguments:
+In the 0.3 update we released startup arguments you can use them by:
+- "--run" This argument will try to launch the server in the normal install dir.
+- "--clean" This argument will try to clear all of the pimines file if you ever wanted to delete.
+- "--version" This argument will show the pimine version.
+Please let us know if you would like anohter startup argument.
 
-**1.6:** That's it!
+**1.7:** That's it!
 If you have any issues compiling, please create an issue. The compilation process may change in newer versions, so check this section every time a new version releases!
 
 ### Troubleshooting
