@@ -50,7 +50,7 @@ void install() {
     }
     std::cout << "Installing dependencies now..." << std::endl;
     // Install dependencies (sudo required) becuase minecraft need some dependencies to run and function!
-    system("sudo apt install -y curl git python3 openjdk-25-jre-headless jq");
+    system("sudo apt install -y curl git python3 python3-venv openjdk-25-jre-headless jq");
     system("clear");
     std::string selected_version = versions[choice-1];
     std::cout << "Installing "+selected_version+"_Minecraft server now..." << std::endl;

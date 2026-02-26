@@ -12,6 +12,7 @@ pimine-x86-64
 *.swp
 *.swo
 CMakeLists.txt
-*Arch-base
-*.py
 compilepackage.sh
+pimine-arm.tar.gz
+pimine-x86-64.tar.gz
+

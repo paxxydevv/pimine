@@ -5,7 +5,7 @@
 #include <filesystem>
 #include <thread>
 #include <chrono>
-
+#include <unistd.h>
 std::string minram = "2G";   // defaults
 std::string maxram = "3G";
 std::string port = "25565";
@@ -46,6 +46,11 @@ void readConfig() {
 void run() {
     std::cout << "Starting Minecraft server...\n";
     readConfig();
+    if (createsite == true) {
+    if (fork() == 0) {
+	execl("/bin/bash", "bash", "./helpers/runwebsite.sh", NULL);
+    }
+    }
 
     const char* sudo_user = getenv("SUDO_USER");
     std::string home_dir;
@@ -93,7 +98,6 @@ void run() {
     system("pkill -f server.jar");
     std::this_thread::sleep_for(std::chrono::seconds(3));
 
-    // Kill server after generation
     system("pkill -f server.jar");
 
     std::this_thread::sleep_for(std::chrono::seconds(3));
