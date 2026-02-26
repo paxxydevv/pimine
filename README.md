@@ -1,5 +1,5 @@
 # PiMine
-![PiMine Logo](assets/piminelogo.png)
+<img src="assets/piminelogo.png" alt="PiMine Logo" width="200"/>
 
 
 ![Version](https://img.shields.io/badge/version-0.3-blue)
