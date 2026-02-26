@@ -15,4 +15,4 @@ CMakeLists.txt
 compilepackage.sh
 pimine-arm.tar.gz
 pimine-x86-64.tar.gz
-
+src/compilepackage.sh

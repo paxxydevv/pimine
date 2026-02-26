@@ -8,6 +8,11 @@ int main(int argc, char *argv[]) {
 	for (int i = 1; i < argc; i++) {
 		std::string arg = argv[i];
 		if (arg == "--clean") {
+			if (geteuid() != 0) {
+					std::cout << "Cleaning sequence must be run with sudo." << std::endl;
+					std::cout << "Usage: sudo ./pimine-arm --clean";
+					return 1;
+					}
 			clear(); // hey so if you are wondering about this function name i was too lazy to change it. It doesnt have any affects to the code
 		}
 		else if (arg == "--version") {
