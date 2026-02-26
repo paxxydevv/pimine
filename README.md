@@ -1,5 +1,7 @@
 # PiMine
-![PiMine Logo](assets/piminelogoasx1.png)
+![PiMine Logo](assets/piminelogo.png)
+
+
 ![Version](https://img.shields.io/badge/version-0.3-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
